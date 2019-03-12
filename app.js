@@ -19,7 +19,6 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
     if (gamePlaying){
         
         rollDice();
-     
         
     }
 });
@@ -61,8 +60,10 @@ function newGame(){
     document.getElementById('current-1').textContent = '0';
      document.getElementById('score-0').textContent = '0';
     document.getElementById('score-1').textContent = '0';
-    document.querySelector('.player-0-panel').classList.add('active');
+    
+    document.querySelector('.player-0-panel').classList.remove('active');
     document.querySelector('.player-1-panel').classList.remove('active');
+    document.querySelector('.player-0-panel').classList.add('active');
 }
 function rollDice(){
     diceDOM = document.querySelector('.dice');
