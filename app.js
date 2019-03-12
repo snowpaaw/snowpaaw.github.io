@@ -23,6 +23,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
     }
 });
 document.querySelector('.btn-hold').addEventListener('click',function(){
+    pastDice = 0;
     scores[activePlayer] += roundScore;
     document.getElementById('score-' + activePlayer).textContent = scores[activePlayer];
     
@@ -56,6 +57,7 @@ function newGame(){
     scores = [0,0];
     roundScore = 0;
     activePlayer = 0;
+    pastDice = 0;
     document.getElementById('current-0').textContent = '0';
     document.getElementById('current-1').textContent = '0';
      document.getElementById('score-0').textContent = '0';
